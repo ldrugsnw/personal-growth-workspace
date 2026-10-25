@@ -1,0 +1,426 @@
+:root {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #273b35;
+  background: #f5f4ef;
+  font-synthesis: none;
+  line-height: 1.65;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #d7ded5;
+  background: #fff;
+  color: inherit;
+  border-radius: 8px;
+  padding: 10px 16px;
+  min-height: 44px;
+}
+button:hover {
+  background: #edf2eb;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #9cab64;
+  outline-offset: 3px;
+}
+.shell {
+  display: flex;
+  min-height: 100dvh;
+}
+aside {
+  width: 236px;
+  flex-shrink: 0;
+  border-right: 1px solid #dde0d6;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  background: #eeefe7;
+}
+.brand {
+  font-size: 34px;
+  font-weight: 750;
+  color: #254739;
+  text-decoration: none;
+  line-height: 1;
+}
+.brand span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.sidebar-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #768075;
+  margin-top: 64px;
+}
+nav {
+  display: grid;
+  gap: 8px;
+}
+nav button {
+  text-align: left;
+  background: transparent;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+}
+nav button[aria-current="page"] {
+  background: #dae3d5;
+  font-weight: 700;
+}
+.local-note {
+  margin-top: auto;
+  padding-top: 64px;
+  font-size: 13px;
+}
+.local-note span {
+  font-size: 11px;
+  color: #747e73;
+}
+main {
+  width: min(100%, 1050px);
+  padding: 30px 60px 80px;
+  min-width: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #6b776e;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #dfe2d8;
+}
+.heading {
+  margin: 52px 0 32px;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #727e62;
+  font-weight: 700;
+}
+h1 {
+  font-size: 34px;
+  letter-spacing: -1.3px;
+  line-height: 1.3;
+  margin: 12px 0;
+}
+h2 {
+  font-size: 19px;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: 18px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+p {
+  overflow-wrap: anywhere;
+}
+.heading p:last-child,
+.compose p,
+.muted {
+  color: #748075;
+  font-size: 14px;
+}
+.compose {
+  background: #e6ebdc;
+  border: 1px solid #d7dfc9;
+  padding: 30px;
+  border-radius: 14px;
+}
+.primary {
+  background: #315642;
+  color: white;
+  border-color: #315642;
+}
+.primary:hover {
+  background: #234331;
+}
+.compose .primary {
+  margin-top: 12px;
+}
+.section-heading,
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.section-heading {
+  margin: 28px 0 12px;
+}
+.section-heading button {
+  font-size: 12px;
+  background: transparent;
+  border: 0;
+}
+.log-card,
+.activity-detail {
+  background: #fff;
+  border: 1px solid #e0e4db;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 16px 0;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #758071;
+  font-size: 12px;
+}
+.log-card p {
+  white-space: pre-wrap;
+}
+.log-card b {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.learning,
+.achievement {
+  border-left: 2px solid #9baa7e;
+  padding-left: 14px;
+  font-size: 14px;
+}
+.achievement {
+  border-color: #d6b577;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.actions button {
+  font-size: 13px;
+}
+.danger {
+  color: #a34536;
+}
+.empty {
+  padding: 44px 24px;
+  text-align: center;
+  border: 1px dashed #cbd3c4;
+  border-radius: 12px;
+  color: #788273;
+  font-size: 14px;
+}
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.activity-card {
+  text-align: left;
+  padding: 24px;
+  min-width: 0;
+}
+.activity-card small {
+  color: #818b7e;
+  font-size: 11px;
+}
+.activity-card p {
+  font-size: 14px;
+}
+.badge {
+  border-radius: 20px;
+  padding: 2px 8px;
+  background: #edf2e6;
+}
+.completed {
+  background: #e6eef4;
+}
+.paused {
+  background: #f4eedf;
+}
+.filter {
+  max-width: 300px;
+}
+.notice,
+.error {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  background: #e5eddd;
+  font-size: 14px;
+}
+.error {
+  background: #fae5df;
+  color: #9b3529;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #172a2566;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2;
+}
+.confirmation {
+  z-index: 3;
+}
+.modal {
+  background: #fafbf7;
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 580px;
+  width: 100%;
+  max-height: 90dvh;
+  overflow: auto;
+  box-shadow: 0 20px 80px #15251b30;
+}
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid #c9d2c3;
+  background: white;
+  color: #273b35;
+  border-radius: 7px;
+  padding: 10px;
+  margin-top: 6px;
+  min-height: 44px;
+  font-size: 16px;
+}
+textarea {
+  resize: vertical;
+  min-height: 85px;
+}
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.checkbox input {
+  width: 20px;
+  min-height: 20px;
+  margin: 0;
+}
+time {
+  white-space: nowrap;
+}
+@media (max-width: 1000px) {
+  aside {
+    width: 190px;
+    padding: 28px 18px;
+  }
+  main {
+    padding: 26px 30px 60px;
+  }
+  h1 {
+    font-size: 29px;
+  }
+}
+@media (max-width: 600px) {
+  .shell {
+    display: block;
+  }
+  aside {
+    width: 100%;
+    padding: 16px 20px;
+    border-right: 0;
+    border-bottom: 1px solid #d7ded5;
+  }
+  .brand {
+    font-size: 24px;
+  }
+  .brand span {
+    display: inline;
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  .sidebar-label,
+  .local-note {
+    display: none;
+  }
+  nav {
+    display: flex;
+    gap: 6px;
+    margin-top: 18px;
+  }
+  nav button {
+    flex: 1;
+    font-size: 13px;
+    padding: 8px;
+  }
+  nav button span {
+    display: none;
+  }
+  main {
+    padding: 20px 20px 50px;
+  }
+  header {
+    font-size: 8px;
+  }
+  .heading {
+    margin-top: 34px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  .compose {
+    padding: 22px;
+  }
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+  .row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .overlay {
+    padding: 10px;
+  }
+  .modal {
+    padding: 22px;
+    max-height: 94dvh;
+  }
+  .log-card {
+    padding: 20px;
+  }
+}
